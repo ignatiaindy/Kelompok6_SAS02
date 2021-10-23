@@ -24,7 +24,7 @@ LXC Ubuntu Server 16.04 IP : 10.0.3.103
 
 1. Rename ubuntu_php5.6 to ubuntu_landing, also change the IP following the new scheme
 
-   ![01_1_rename](D:\ITTelkom IT\SAS\Soal Prak 1\assets\01_1_rename.PNG)
+ ![01_1_rename](https://user-images.githubusercontent.com/77930572/138566072-9093e5ae-8937-469e-9ba2-51a83edb3ad0.PNG)
 
    Type
 
