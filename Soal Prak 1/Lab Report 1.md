@@ -42,7 +42,7 @@ LXC Ubuntu Server 16.04 IP : 10.0.3.103
 
    If the container name has changed to ubuntu_landing, we have to change the IP from before to a new one following the new scheme
 
-   ![01_2_setstaticiplanding](D:\ITTelkom IT\SAS\Soal Prak 1\assets\01_2_setstaticiplanding.PNG)
+  ![01_2_setstaticiplanding](https://user-images.githubusercontent.com/77930572/138566090-2572b992-f3e0-4c2e-8ff0-e3c3c464cb8d.PNG)
 
    We need to start the container first (if the container state is not running)
 
