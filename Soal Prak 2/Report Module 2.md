@@ -58,7 +58,7 @@ Install laravel with ansible
 
 - [ ]  First we need to enter to `cd ~/ansible/modul2-ansible` and then we need to make file with the name install-laravel.yml
 
-![01_1](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_1.PNG)
+![01_1](assets/01_1.PNG)
 
 ```
 nano install-laravel.yml
@@ -75,7 +75,7 @@ nano install-laravel.yml
     - lv
 ```
 
-![01_2_install_laravel_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_2_install_laravel_yml.PNG)
+![01_2_install_laravel_yml](assets/01_2_install_laravel_yml.PNG)
 
 - [ ]  After that we need to make directories for tasks and handlers in folder php, and then enter tasks main.yml to install packages
 
@@ -86,19 +86,19 @@ cd roles/php/tasks
 nano main.yml
 ```
 
-![01_3_php_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_3_php_tasks_mainyml.PNG)
+![01_3_php_tasks_mainyml](assets/01_3_php_tasks_mainyml.PNG)
 
-![01_4_php_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_4_php_tasks_mainyml.PNG)
+![01_4_php_tasks_mainyml](assets/01_4_php_tasks_mainyml.PNG)
 
 - [ ]  Then enter handlers main.yml to restart php
 
-![01_5_php_handlers](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_5_php_handlers.PNG)
+![01_5_php_handlers](assets/01_5_php_handlers.PNG)
 
-![01_6_php_handlers_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\01_6_php_handlers_mainyml.PNG)
+![01_6_php_handlers_mainyml](assets/01_6_php_handlers_mainyml.PNG)
 
 - [ ]  After that we need to make directories for tasks, templates, and handlers in folder lv, and then enter tasks main.yml to install package laravel and composer
 
-![02_1_mkdir_lv](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_1_mkdir_lv.PNG)
+![02_1_mkdir_lv](assets/02_1_mkdir_lv.PNG)
 
 ```
 mkdir -p roles/lv/tasks
@@ -108,15 +108,15 @@ cd roles/lv/tasks
 nano main.yml
 ```
 
-![02_2_kumpulan_cd](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_2_kumpulan_cd.PNG)
+![02_2_kumpulan_cd](assets/02_2_kumpulan_cd.PNG)
 
-![02_3_lv_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_3_lv_tasks_mainyml.PNG)
+![02_3_lv_tasks_mainyml](assets/02_3_lv_tasks_mainyml.PNG)
 
-![02_4_lv_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_4_lv_tasks_mainyml.PNG)
+![02_4_lv_tasks_mainyml](assets/02_4_lv_tasks_mainyml.PNG)
 
 No Interaction is used because so that the system do not ask any interactive question
 
-![02_5_lv_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_5_lv_tasks_mainyml.PNG)
+![02_5_lv_tasks_mainyml](assets/02_5_lv_tasks_mainyml.PNG)
 
 - [ ]  Then enter templates env.template (This is laravel configuration)
 
@@ -125,9 +125,9 @@ cd roles/lv/templates
 nano env.template
 ```
 
-![02_6_lv_templates_env_template](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_6_lv_templates_env_template.PNG)
+![02_6_lv_templates_env_template](assets/02_6_lv_templates_env_template.PNG)
 
-![02_7_lv_templates_env_template](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_7_lv_templates_env_template.PNG)
+![02_7_lv_templates_env_template](assets/02_7_lv_templates_env_template.PNG)
 
 - [ ]  After that we need to enter templates lv.conf for nginx configuration
 
@@ -135,7 +135,7 @@ nano env.template
 nano lv.conf
 ```
 
-![02_8_lv_templates_lvconf](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_8_lv_templates_lvconf.PNG)
+![02_8_lv_templates_lvconf](assets/02_8_lv_templates_lvconf.PNG)
 
 - [ ] Then we have to enter handlers main.yml to restart php and nginx
 
@@ -144,7 +144,7 @@ cd roles/lv/handlers
 nano main.yml
 ```
 
-![02_9_lv_handlers_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_9_lv_handlers_mainyml.PNG)
+![02_9_lv_handlers_mainyml](assets/02_9_lv_handlers_mainyml.PNG)
 
 - [ ]  After that we run ansible playbook
 
@@ -152,13 +152,13 @@ nano main.yml
 ansible-playbook -i hosts install-laravel -k
 ```
 
-![02_10_ansible_playbook_install_laravel_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_10_ansible_playbook_install_laravel_yml.PNG)
+![02_10_ansible_playbook_install_laravel_yml](assets/02_10_ansible_playbook_install_laravel_yml.PNG)
 
-![02_11_ansible_playbook_install_laravel_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_11_ansible_playbook_install_laravel_yml.PNG)
+![02_11_ansible_playbook_install_laravel_yml](assets/02_11_ansible_playbook_install_laravel_yml.PNG)
 
 - [ ]  YAY! It's installed. We not finished yet, we need to check it. Open `http://vm.local/` in web browser
 
-![02_12_Hasil_Laravel_Web_Browser](D:\ITTelkom IT\SAS\Soal Prak 2\assets\02_12_Hasil_Laravel_Web_Browser.PNG)
+![02_12_Hasil_Laravel_Web_Browser](assets/02_12_Hasil_Laravel_Web_Browser.PNG)
 
 - [ ] Yeayyy... Laravel is working
 
@@ -179,7 +179,7 @@ cd roles/lv/tasks
 nano main.yml
 ```
 
-![04_1_lv_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_1_lv_tasks_mainyml.PNG)
+![04_1_lv_tasks_mainyml](assets/04_1_lv_tasks_mainyml.PNG)
 
 - [ ] Change from fastcgi_pass unix to fastcgi_pass 127.0.0.1:9001
 
@@ -188,7 +188,7 @@ cd roles/lv/templates
 nano lv.conf
 ```
 
-![04_2_lv_templates_lvconf](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_2_lv_templates_lvconf.PNG)
+![04_2_lv_templates_lvconf](assets/04_2_lv_templates_lvconf.PNG)
 
 - [ ] Then make a folder 'www.conf'. Change the prefix to /var/www and listen to 127.0.0.1:9001
 
@@ -196,7 +196,7 @@ nano lv.conf
 nano www.conf
 ```
 
-![04_3_lv_templates_wwwconf](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_3_lv_templates_wwwconf.PNG)
+![04_3_lv_templates_wwwconf](assets/04_3_lv_templates_wwwconf.PNG)
 
 - [ ] After changing the templates, we went to handlers and make sure it have restart php and restart nginx. Done? then start ansible playbook install laravel
 
@@ -204,13 +204,13 @@ nano www.conf
 ansible-playbook -i hosts install-laravel.yml -k
 ```
 
-![04_4_Run_Ansible_Playbook_installlaravel](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_4_Run_Ansible_Playbook_installlaravel.PNG)
+![04_4_Run_Ansible_Playbook_installlaravel](assets/04_4_Run_Ansible_Playbook_installlaravel.PNG)
 
-![04_5_Run_Ansible_Playbook_installlaravel](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_5_Run_Ansible_Playbook_installlaravel.PNG)
+![04_5_Run_Ansible_Playbook_installlaravel](assets/04_5_Run_Ansible_Playbook_installlaravel.PNG)
 
 - [ ] We go to web browser, and it works :)
 
-![04_6_Done_Laravel_Soal_Responsi](D:\ITTelkom IT\SAS\Soal Prak 2\assets\04_6_Done_Laravel_Soal_Responsi.PNG)
+![04_6_Done_Laravel_Soal_Responsi](assets/04_6_Done_Laravel_Soal_Responsi.PNG)
 
 
 
@@ -224,7 +224,7 @@ Install wordpress with ansible
 
 - [ ]  we need to enter to `cd ~/ansible/modul2-ansible` and then we need to make file with the name install-wp.yml
 
-![03_1](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_1.PNG)
+![03_1](assets/03_1.PNG)
 
 ```
 nano install-wp.yml
@@ -240,7 +240,7 @@ nano install-wp.yml
     - wp
 ```
 
-![03_2_install_wordpress_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_2_install_wordpress_yml.PNG)
+![03_2_install_wordpress_yml](assets/03_2_install_wordpress_yml.PNG)
 
 - [ ]  After that we need to make directories for tasks, templates, and handlers in folder wp, and then enter tasks main.yml to install packages
 
@@ -249,24 +249,24 @@ cd roles/wp/tasks
 nano main.yml
 ```
 
-![03_3_wp_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_3_wp_tasks_mainyml.PNG)
+![03_3_wp_tasks_mainyml](assets/03_3_wp_tasks_mainyml.PNG)
 
 we need to install wget because with wget we can use it to retrieve content and files from various web servers. The name is a combination of World  Wide Web and the word get. It supports downloads via FTP, SFTP, HTTP, and HTTPS. And because wget is usable on any Unix system. We can use wget command to download the content of an entire site, in our case is WordPress.
 
-![03_4_wp_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_4_wp_tasks_mainyml.PNG)
+![03_4_wp_tasks_mainyml](assets/03_4_wp_tasks_mainyml.PNG)
 
-![03_5_wp_tasks_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_5_wp_tasks_mainyml.PNG)
+![03_5_wp_tasks_mainyml](assets/03_5_wp_tasks_mainyml.PNG)
 
 - [ ]  Then enter templates wp.conf (This is wordpress configuration)
 
-![03_6_wp_templates](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_6_wp_templates.PNG)
+![03_6_wp_templates](assets/03_6_wp_templates.PNG)
 
 ```
 cd roles/wp/templates
 nano wp.conf
 ```
 
-![03_7_wp_templates_wpconf](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_7_wp_templates_wpconf.PNG)
+![03_7_wp_templates_wpconf](assets/03_7_wp_templates_wpconf.PNG)
 
 - [ ]  After that we need to enter templates wp.local for nginx configuration
 
@@ -274,7 +274,7 @@ nano wp.conf
 nano wp.local
 ```
 
-![03_8_wp_templates_wplocal](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_8_wp_templates_wplocal.PNG)
+![03_8_wp_templates_wplocal](assets/03_8_wp_templates_wplocal.PNG)
 
 - [ ]  Then we have to enter handlers main.yml to restart php and nginx
 
@@ -283,9 +283,9 @@ cd roles/wp/handlers
 nano main.yml
 ```
 
-![03_9_wp_handlers](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_9_wp_handlers.PNG)
+![03_9_wp_handlers](assets/03_9_wp_handlers.PNG)
 
-![03_10_wp_handlers_mainyml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_10_wp_handlers_mainyml.PNG)
+![03_10_wp_handlers_mainyml](assets/03_10_wp_handlers_mainyml.PNG)
 
 - [ ]  After that we run ansible playbook
 
@@ -293,17 +293,17 @@ nano main.yml
 ansible-playbook -i hosts install-wp -k
 ```
 
-![03_11_ansible_playbook_install_wordpress_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_11_ansible_playbook_install_wordpress_yml.PNG)
+![03_11_ansible_playbook_install_wordpress_yml](assets/03_11_ansible_playbook_install_wordpress_yml.PNG)
 
-![03_12_ansible_playbook_install_wordpress_yml](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_12_ansible_playbook_install_wordpress_yml.PNG)
+![03_12_ansible_playbook_install_wordpress_yml](assets/03_12_ansible_playbook_install_wordpress_yml.PNG)
 
 - [ ]  YAY! It's installed. We not finished yet, we need to check it. Open `http://vm.local/blog/` in web browser
 
-![03_13_Hasil_WordPress_Web_Browser](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_13_Hasil_WordPress_Web_Browser.PNG)
+![03_13_Hasil_WordPress_Web_Browser](assets/03_13_Hasil_WordPress_Web_Browser.PNG)
 
-![03_14_Sukses_WordPress_Web_Browser](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_14_Sukses_WordPress_Web_Browser.PNG)
+![03_14_Sukses_WordPress_Web_Browser](assets/03_14_Sukses_WordPress_Web_Browser.PNG)
 
-![03_15_Dashboard_WordPress_Web_Browser](D:\ITTelkom IT\SAS\Soal Prak 2\assets\03_15_Dashboard_WordPress_Web_Browser.PNG)
+![03_15_Dashboard_WordPress_Web_Browser](assets/03_15_Dashboard_WordPress_Web_Browser.PNG)
 
 - [ ]  Finallyyyyy it's done.
 
